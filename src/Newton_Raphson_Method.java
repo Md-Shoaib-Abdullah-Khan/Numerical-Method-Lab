@@ -13,7 +13,6 @@ public class Newton_Raphson_Method {
 
             System.out.println(x1);
 
-
         }
         public static double equation(double x){
             return x*x-25;

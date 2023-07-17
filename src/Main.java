@@ -7,7 +7,8 @@ public class Main {
         False_Position falsePosition = new False_Position();
         Newton_Raphson_Method newtonRaphsonMethod = new Newton_Raphson_Method();
         Secant_Method secantMethod = new Secant_Method();
-        newtonRaphsonMethod.solve();
+        Forward_Interpolation forwardInterpolation = new Forward_Interpolation();
+        forwardInterpolation.solve();
 
     }
 }
