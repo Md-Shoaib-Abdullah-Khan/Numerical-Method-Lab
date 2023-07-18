@@ -1,24 +1,27 @@
 public class Newton_Raphson_Method {
         public static void solve() {
-            double x1=-1*Math.random()*100, x2;
+            double x=1*Math.random()*100, x2;
 
 
-            x2 = x1 + equation(x1)/ diff_equation(x1);
-            double tolerance=0.05;
-            while(Math.abs(equation(x1)-0)>tolerance){
-                x1 = x2;
-                x2 = x1 - equation(x1)/ diff_equation(x1);
-                System.out.println(x1+" "+x2);
+            x = x + equation(x)/ diff_equation(x);
+            double tolerance=0.0005;
+            int steps=0;
+            while(Math.abs(equation(x)-0)>tolerance){
+                x = x - equation(x)/ diff_equation(x);
+                System.out.println(x);
+                steps++;
             }
 
-            System.out.println(x1);
+            System.out.println("Root is " +x);
+            System.out.println("Steps" + steps);
+
 
         }
         public static double equation(double x){
-            return x*x-25;
+            return x*x*x + 4*x*x-1;
         }
         public static double diff_equation(double x){
-            return 2*x;
+            return 3*x*x + 8*x;
         }
 
 }

@@ -12,7 +12,9 @@ public class Main {
         Newtons_Divided_Difference newtonsDividedDifference = new Newtons_Divided_Difference();
         Trapezoidal_rule trapezoidalRule = new Trapezoidal_rule();
         Simpson_rule simpsonRule = new Simpson_rule();
+        Euler_Method eulerMethod = new Euler_Method();
 
+        secantMethod.solve();
 
     }
 }
